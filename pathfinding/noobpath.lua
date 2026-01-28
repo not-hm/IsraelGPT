@@ -120,8 +120,12 @@ end
 
 -- Constructor With Default Humanoid Signals
 function module.Humanoid(Character : Model, AgentParams : Path.AgentParams?, Precise : boolean?)
-	local Humanoid : Humanoid = Character:FindFirstChildOfClass("Humanoid")
-	local Move = function(WaypointPosition) Humanoid:MoveTo(WaypointPosition) end
+	local Humanoid : Humanoid = Character:FindFirstChildOfClass("Humanoid") or Character:WaitForChild("Humanoid", 5)
+	if not Humanoid then error("No Humanoid found in Character") end
+
+	local Move = function(WaypointPosition)
+		Humanoid:MoveTo(WaypointPosition)
+	end
 	
 	local JumpFinished = GS.new()
 	local MoveFinished = Humanoid.MoveToFinished
@@ -450,9 +454,9 @@ function NoobPath:Destroy()
 	self:Stop()
 	self.Destroying = true
 	
-	self.MoveFinishedC:Disconnect()
-	self.JumpFinishedC:Disconnect()
-	
+	if self.MoveFinishedC then self.MoveFinishedC:Disconnect() end
+	if self.JumpFinishedC then self.JumpFinishedC:Disconnect() end
+
 	if Server then
 		self.DescendantAddedC:Disconnect()
 	end
