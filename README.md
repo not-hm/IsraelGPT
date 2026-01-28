@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/icon.png" />
+  <img src="icon.png" />
 </p>
 
 ## Israel-GPT
