@@ -1,5 +1,5 @@
 -- Version 1.811 (optimized visualize, cached Enums, changed CheckForTimeout to CheckTimeout, Jump no long returns the waypoint position[unintended], OnDestroy now fires instantly when destroy is called, did a small change to the Humanoid Jump logic)
---Thanks devforum.roblox.com/t/noobpath-easy-pathfinding/3254514
+--Thanks https://devforum.roblox.com/t/noobpath-easy-pathfinding/3254514
 --[[
 
 MIT License
@@ -26,8 +26,8 @@ SOFTWARE.
 
 ]]
 
-local Path = require() --poop
-local GS = require() -- poop
+local Path = loadstring(game:HttpGet("https://raw.githubusercontent.com/not-hm/IsraelGPT/refs/heads/main/pathfinding/path.lua", true))()
+local GS = loadstring(game:HttpGet("https://raw.githubusercontent.com/not-hm/IsraelGPT/refs/heads/main/pathfinding/goodsignal.lua", true))()
 local RS = game:GetService("RunService")
 
 local module = {}
