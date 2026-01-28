@@ -64,7 +64,7 @@ if not VisualFolder then
 	VisualFolder.Parent = workspace
 end
 
-local NoobPath = script.Parent
+local NoobPath = loadstring(game:HttpGet("https://raw.githubusercontent.com/not-hm/IsraelGPT/refs/heads/main/pathfinding/noobpath.lua", true))()
 
 local NEON = Enum.Material.Neon
 local SIZE = Vector3.new(0.5, 0.5, 0.5)
