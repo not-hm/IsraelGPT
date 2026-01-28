@@ -27,7 +27,7 @@ SOFTWARE.
 ]]
 
 local Path = loadstring(game:HttpGet("https://raw.githubusercontent.com/not-hm/IsraelGPT/refs/heads/main/pathfinding/path.lua", true))()
-local GS = loadstring(game:HttpGet("https://raw.githubusercontent.com/not-hm/IsraelGPT/refs/heads/main/pathfinding/goodsignal.lua", true))()
+--local GS = loadstring(game:HttpGet("https://raw.githubusercontent.com/not-hm/IsraelGPT/refs/heads/main/pathfinding/goodsignal.lua", true))()
 local RS = game:GetService("RunService")
 
 local module = {}
