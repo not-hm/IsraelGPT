@@ -3,7 +3,7 @@
 </p>
 
 ## Israel-GPT
-Open source project i made for fun
+Lowkirkuinely made this for testing
 
 ### Example
 ```lua
